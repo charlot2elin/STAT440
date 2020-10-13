@@ -339,12 +339,12 @@ general1=lm(duration~ confirmed + countsym + fever+`C-59dcd` +`C-16725`+ `C-c263
             +`C-40f91`+ `C-3f760` +`C-f99a5`+ `C-992f7`+ `C-61080`, data = train)
 general2=lm(duration ~ confirmed + `P-38fc4` + `C-fb9d7` + `0b204` + `C-38fc4` + `P-aed28` + `V-10775` + `P-c4d2f` + `C-57155` +
             + b4ff4 + cf966 + `44bc6`, data = train)
-general3
+general3=lm(duration ~ duration ~ confirmed + `C-c263d` + `C-38fc4` + `0b204` + `V-10775` + `P-38fc4` +`P-c4d2f`)
 
 
 summary(general1)
 summary(general2)
-
+summary(general3)
 
 # pred = predict(lm(duration ~ confirmed + V6 + C2 + C4 + C5 + C6 + 
 #                     C7 + P3 + P11 + P12 + P13 + P17 +P32+P33+ P19 + +`57`+`59`+`65`+`84`, train), new = test)
@@ -354,8 +354,8 @@ summary(general2)
 
 #(Use the predict function to predict the result, then export the output to txt.)
 
-pred = predict(lm(duration ~  confirmed + countsym + fever + C1 + C2 + C3 + C4 + C5 + C6 + 
-                    C7+C8+C9+C10, train), new = test)
+pred = predict(lm(duration ~  confirmed + countsym + fever + `C-59dcd` +`C-16725`+ `C-c263d`+ `C-fb9d7`+ `C-d019a`+ `C-38fc4`+`C-57155`
+            +`C-40f91`+ `C-3f760` +`C-f99a5`+ `C-992f7`+ `C-61080`, train), new = test)
 
 kaggle=cbind(1:200,pred)
 colnames(kaggle)=c('Id','duration')
