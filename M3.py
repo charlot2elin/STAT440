@@ -1,3 +1,8 @@
+#ref:https://www.tensorflow.org/tutorials/keras/classification?hl=zh-cn
+#http://www.keyan.me/09-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8ECV-01/chapter4/section9.html
+#https://github.com/cchangcs/trash-classification/blob/master/src/predict.py 
+
+
 import os
 from PIL import Image
 import numpy as np
