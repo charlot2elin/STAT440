@@ -68,6 +68,8 @@ def read_data(data_dir_test):
 fpaths_test, datas_test,labels_test= read_data(data_dir_test)
 
 
+#All three models not performing better than baseline
+#Image rescale is not been done, only did image/255 by size
 
 #model = keras.Sequential([
  #   keras.Input(shape=(384,512,3)),
